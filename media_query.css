@@ -1,0 +1,47 @@
+@media screen and (min-width: 1600px){
+   .aside-login{
+      padding: 0px 100px;
+   }
+}
+
+@media screen and (max-width: 1279px){
+   body{
+      min-width: 420px;
+      min-height: 900px;
+      background-color: white;
+   }
+
+   header{
+      display: none;
+   }
+
+   main{
+      height: 0px;
+      width: 0px;
+      overflow: hidden;
+   }
+
+   .aside-login{
+      width: 100%;
+      left: 0px;
+      padding: 0px 300px;
+   }
+}
+
+@media screen and (max-width: 1000px){
+   .aside-login{
+      padding: 0px 200px;
+   }
+}
+
+@media screen and (max-width: 800px){
+   .aside-login{
+      padding: 0px 100px;
+   }
+}
+
+@media screen and (max-width: 600px){
+   .aside-login{
+      padding: 0px 10px;
+   }
+}

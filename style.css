@@ -1,0 +1,352 @@
+*{
+   box-sizing: border-box;
+   font-family: "Outfit", sans-serif;
+   margin: 0px;
+   padding: 0px;
+}
+
+body{
+   min-width: 1280px;
+   min-height: 720px;
+   background-color: lightsalmon;
+   position: relative;
+   height: 100vh;
+}
+
+header{
+   height: 10%;
+   width: 60%;
+}
+
+.header-navbar{
+   height: 100%;
+   margin-left: 50px;
+   display: flex;
+   align-items: center;
+}
+
+.header-navbar-logo{
+   height: 60px;
+   width: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: "Rubik Glitch Pop", system-ui;
+   font-size: 36px;
+   color: white;
+   background-color: black;
+}
+
+.header-navbar-list{
+   margin-left: 80px;
+   display: flex;
+   list-style: none;
+}
+
+.header-navbar-list-item{
+   margin: 0px 10px;
+   font-size: 22px;
+   font-weight: 600;
+   padding: 10px 30px;
+   transition: 0.1s;
+}
+
+.header-navbar-list-item:hover{
+   cursor: pointer;
+   color: white;
+   background-color: black;
+}
+
+main{
+   height: 90%;
+   width: 60%;
+}
+
+.section-main{
+   height: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding-left: 50px;
+}
+
+.section-main-container{
+   border-left: 10px solid rgba(255, 255, 255, 0.4);
+   padding-left: 15px;
+}
+
+.section-main-suptitle{
+   font-size: 32px;
+   color: white;
+}
+
+.section-main-title{
+   font-family: "Poiret One", sans-serif;
+   color: black;
+   font-size: 90px;
+   margin: 10px 0px 20px 0px;
+}
+
+.section-main-button{
+   background-color: transparent;
+   border: 2px solid black;
+   font-size: 22px;
+   font-weight: 700;
+   padding: 10px 50px;
+   color: black;
+   transition: 0.1s;
+}
+
+.section-main-button:hover{
+   color: white;
+   background-color: black;
+   cursor: pointer;
+}
+
+.aside-login{
+   width: 40%;
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   height: 100%;
+   background-color: white;
+   padding: 0px 50px;
+}
+
+.aside-login-container{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.aside-login-headings{
+   width: 100%;
+}
+
+.aside-login-headings > h2{
+   font-size: 32px;
+   font-weight: 600;
+}
+
+form{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+.aside-login-form-input{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.aside-login-form-input input{
+   width: 100%;
+   border: none;
+   outline: none;
+   font-size: 18px;
+   border-radius: 5px;
+   margin: 10px 0px;
+   padding: 10px 15px;
+   background-color: rgb(245, 245, 245);
+   border: 2px solid transparent;
+   transition: 0.1s;
+}
+
+.aside-login-form-input > div{
+   width: 100%;
+   position: relative;
+   transition: 0.3s;
+}
+
+.aside-login-form-input > div:has(input[type="email"]:focus)::before{
+   content: "Email";
+   position: absolute;
+   font-size: 14px;
+   font-weight: 500;
+   left: 10px;
+   background-color: white;
+   padding: 0px 5px;
+}
+
+.aside-login-form-input > div:has(input[type="password"]:focus)::before{
+   content: "Password";
+   position: absolute;
+   font-size: 14px;
+   font-weight: 500;
+   left: 10px;
+   background-color: white;
+   padding: 0px 5px;
+}
+
+.aside-login-form-input input:focus{
+   border: 2px solid rgb(230, 230, 230);
+   background-color: white;
+}
+
+.aside-login-form-input input:focus::placeholder{
+   color: transparent;
+}
+
+.aside-login-form-options{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 5px;
+}
+
+.switch-button{
+   cursor: pointer;
+   background-color: lightgray;
+   width: 50px;
+   height: 30px;
+   border-radius: 50px;
+   position: relative;
+   transition: 0.4s;
+   display: flex;
+}
+
+.switch-button::before{
+   content: "Remember me";
+   text-wrap: nowrap;
+   position: absolute;
+   left: 60px;
+   top: 5px;
+   font-size: 14px;
+   color: rgb(140, 140, 140);
+}
+
+.switch-button > input{
+   height: 0px;
+   width: 0px;
+}
+
+.switch-slider{
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   display: block;
+   height: 24px;
+   width: 24px;
+   border-radius: 50%;
+   background-color: white;
+   transition: 0.4s;
+   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-button:has(input:checked) .switch-slider{
+   transform: translateX(20px);
+}
+
+.switch-button:has(input:checked){
+   background-color: lightsalmon;
+}
+
+.aside-login-form-options a{
+   color: black;
+   text-decoration: none;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.aside-login-signin-button{
+   border: none;
+   font-size: 18px;
+   font-weight: 600;
+   width: 100%;
+   padding: 15px 0px;
+   margin-top: 20px;
+   background-color: black;
+   color: white;
+   transition: 0.1s;
+}
+
+.aside-login-signin-button:hover{
+   cursor: pointer;
+   background-color: lightsalmon;
+   color: black;
+}
+
+.aside-login-or{
+   position: relative;
+   width: 100%;
+   text-align: center;
+   font-weight: 500;
+   color: rgb(140, 140, 140);
+   margin-bottom: 20px;
+}
+
+.aside-login-or::after{
+   content: "";
+   position: absolute;
+   height: 2px;
+   background-color: rgb(235, 235, 235);
+   left: 0px;
+   top: 10px;
+   width: 47%;
+}
+
+.aside-login-or::before{
+   content: "";
+   position: absolute;
+   height: 2px;
+   background-color: rgb(235, 235, 235);
+   right: 0px;
+   top: 10px;
+   width: 47%;
+}
+
+.aside-login-buttons-external{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 80px;
+}
+
+.aside-login-buttons-external button{
+   border: 2px solid rgb(235, 235, 235);
+   background-color: white;
+   padding: 10px 50px;
+   font-size: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.1s;
+}
+
+.aside-login-button-facebook{
+   color: #1778F2;
+}
+
+.aside-login-button-google{
+   color: #DB4437;
+}
+
+.aside-login-button-apple{
+   color: black;
+}
+
+.aside-login-buttons-external > button:hover{
+   cursor: pointer;
+   background-color: black;
+   border-color: black;
+}
+
+.aside-login-buttons-external > button:hover i{
+   color: white;
+}
+
+.aside-login-footer a{
+   text-decoration: none;
+   color: black;
+   font-weight: 600;
+}
